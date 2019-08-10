@@ -12,6 +12,8 @@ var extraCanvasCol=255
 let canvas1xpos=325
 var canvas1ypos=80
 var button
+var button2
+var button3
 var slider
 var slider2
 var extraCanvasColR=100
@@ -33,9 +35,20 @@ thetaX=100
 thetaY=100
 theta2X=25
 theta2Y=5
+
 button=createButton("CLICK ME TO CHANGE SPHERE COLOUR")
 button.position(10,265)
 button.mousePressed(change)
+/*
+button2=createButton("Run Page 2")
+button2.position(10,500)
+button2.mousePressed(loadPage2)
+
+button3=createButton("Run Page 3")
+button3.position(200,500)
+button3.mousePressed(loadPage3)
+
+*/
 
 slider=createSlider(0,500,0)
 slider2=createSlider(0,500,0)
@@ -80,5 +93,15 @@ theta2X=theta2X+2
   //text("hello2",100,100);
 }
 
+/*
+function loadPage2() {
 
+change()
+}
 
+function loadPage3() {
+
+change()
+}
+
+*/
