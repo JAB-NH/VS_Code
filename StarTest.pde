@@ -11,7 +11,7 @@ Star[] stars = new Star[500];
 float speed;
 
 void setup() {
-  size(200, 200);
+  size(250, 250);
   // I fill the array with a for loop;
   // running 800 times, it creates a new star using the Star() class.
   for (int i = 0; i < stars.length; i++) {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewpoint" content="width=\, initial-scale=1.0 "/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Fetch ISS JSON from API</title>
+    <title>ISS Current Location</title>
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
@@ -69,8 +69,8 @@
           firstTime=false;
        }
 
-        document.getElementById('lat').textContent=latitude.toFixed(2);
-        document.getElementById('lon').textContent=longitude.toFixed(2);
+        document.getElementById('lat').textContent=latitude.toFixed(4);
+        document.getElementById('lon').textContent=longitude.toFixed(4);
         document.getElementById('alt').textContent=altitude.toFixed(0);
         document.getElementById('vel').textContent=velocity.toFixed(0);
 

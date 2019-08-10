@@ -36,7 +36,7 @@ thetaY=100
 theta2X=25
 theta2Y=5
 
-button=createButton("CLICK ME TO CHANGE SPHERE COLOUR")
+button=createButton("CLICK ME TO CHANGE DISC COLOUR")
 button.position(10,265)
 button.mousePressed(change)
 /*
@@ -50,8 +50,8 @@ button3.mousePressed(loadPage3)
 
 */
 
-slider=createSlider(0,500,0)
-slider2=createSlider(0,500,0)
+slider=createSlider(0,200,50)
+slider2=createSlider(0,200,50)
 slider.position(10,350)
 slider2.position(10,440)
 }
