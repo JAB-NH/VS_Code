@@ -1,6 +1,8 @@
-var song;
+var song1;
+var song2;
 var slider;
 var button;
+var canvas;
 
 function preload() {
   // we have included both an .ogg file and an .mp3 file
@@ -9,14 +11,15 @@ function preload() {
   // loadSound will load the ogg file
   // we have included with our sketch
  // song = loadSound("watchtower.mp3");
-  song = loadSound("One_Day.wav");
+  song1 = loadSound("On The Streets of Amsterdam.wav");
+  song2 = loadSound("watchtower.mp3")
   
 }
 
 function setup() {
-  createCanvas(50, 50);
+  canvas = createCanvas(50, 50);
 
-slider=createSlider(0,1,.3,0.01);
+//slider=createSlider(0,1,.3,0.01);
   //createElement('p');
   //button=createButton("Click to Play")
 
@@ -27,19 +30,23 @@ slider=createSlider(0,1,.3,0.01);
 }
 
 function draw(){
-  song.setVolume(slider.value())
+  //song1.setVolume(slider.value())
 
 }
 
 
 function mousePressed(){
 
-  if (!song.isPlaying()) {
+  if (!song1.isPlaying()) {
     // .isPlaying() returns a boolean
-    song.play();
+    song2.pause();
+    song1.play();
+    canvas.position(50,200);
     background(0,255, 0);
   } else {
-    song.pause(); // playback will resume from the pause position
+    song1.pause(); // playback will resume from the pause position
+    song2.play();
+    canvas.position(200,200);
     background(255,0, 0);
   }
 }
