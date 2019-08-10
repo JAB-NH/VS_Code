@@ -3,8 +3,8 @@ int radiusSpacing = 50;//100;
 float angle = 0;
 int centreX;
 int centreY;
-int widthX = 200;//1024; � //screen.width;
-int heightY = 200;//710; � //screen.height;
+int widthX = 250;//1024; � //screen.width;
+int heightY = 250;//710; � //screen.height;
 
 void setup() {
 size(widthX, heightY);
@@ -12,7 +12,7 @@ centreX=0;
 centreY=0;
 stroke(255,0,0);
 strokeWeight(2);
-textSize(15);
+textSize(12);
 frameRate(60);
 }
 
@@ -33,11 +33,12 @@ ellipse(0,0,radius-radiusSpacing*5,radius-radiusSpacing*5);
 //ellipse(0,0,radius/10,radius/10);
 
 fill(255);
-text("125",-radius/2-15,0); text("125",radius/2-15,0);
-text("100",-radius/2+40,0); text("100",radius/2-60,0);
-text("75",-radius/2+90,0);text("75",radius/2-110,0);
-text("50",-radius/2+140,0);text("50",radius/2-160,0);
-text("25",-radius/2+190,0);text("25",radius/2-210,0);
+// 1st text is left side
+text("100",-radius/2-15,0); text("100",radius/2-15,0);
+text("75",-radius/2+15,0); text("75",radius/2-40,0);
+text("50",-radius/2+45,0);text("50",radius/2-60,0);
+text("25",-radius/2+70,0);text("25",radius/2-85,0);
+text("O",-5,0);
 //text("75",radius-radiusSpacing*3-10,0);text("75",-(radius-radiusSpacing*3)-10,0);
 fill(0);
 
