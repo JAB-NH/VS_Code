@@ -16,21 +16,21 @@ var button2
 var button3
 var slider
 var slider2
-var extraCanvasColR=100
-var extraCanvasColG=100
-var extraCanvasColB=100
+var extraCanvasColR=200
+var extraCanvasColG=200
+var extraCanvasColB=200
 
 function setup() {
-wid=400
-ht=400
+wid=300
+ht=300
 canvas = createCanvas(wid,ht, WEBGL);
 // Create a separate graphic plane
-extraCanvas=createGraphics(wid,ht,WEBGL);
+extraCanvas=createGraphics(wid-50,ht-50,WEBGL);
 canvas.position(canvas1xpos,canvas1ypos)
 extraCanvas.background(extraCanvasColR,extraCanvasColG,extraCanvasColB) 
 extraCanvas.clear()
 //extraCanvas.position(canvas1xpos,canvas1ypos)
-extraCanvas.position(0,0)
+extraCanvas.position(canvas1xpos,canvas1ypos)//position(0,0)
 thetaX=100
 thetaY=100
 theta2X=25
@@ -81,12 +81,12 @@ function change() {
   thetaY=thetaY+1
   push()
   extraCanvas.fill(extraCanvasColR,extraCanvasColG,extraCanvasColB)
-  extraCanvas.sphere(170)
+  extraCanvas.sphere(100)
   rotateX(theta2X*0.01)
   rotateY(theta2Y*0.01)
   rotateZ(theta2X*0.01)
 
-image(extraCanvas,-250,-300)
+image(extraCanvas,-50,-50)
 pop()
 theta2X=theta2X+2
   theta2Y=theta2Y+2
