@@ -5,11 +5,6 @@ var button;
 var canvas;
 
 function preload() {
-  // we have included both an .ogg file and an .mp3 file
-  soundFormats('wav');   //, 'mp3');
-  // if mp3 is not supported by this browser,
-  // loadSound will load the ogg file
-  // we have included with our sketch
  // song = loadSound("watchtower.mp3");
   song1 = loadSound("On The Streets of Amsterdam.wav");
   song2 = loadSound("One_Day.wav")
@@ -17,12 +12,15 @@ function preload() {
 }
 
 function setup() {
-  canvas = createCanvas(50, 50);
+  canvas = createCanvas(100, 100);
 
 //slider=createSlider(0,1,.3,0.01);
-  //createElement('br');
-  //createElement('br');
-  button=createButton("Click to Play")
+createElement('br');
+createElement('br');
+createElement('br');
+createElement('br');
+createElement('br');
+button=createButton("Click to Play")
 
  // button.mousePressed("play")
   // CANNOT NCLUDE THE NEXT LINE     
