@@ -1,4 +1,4 @@
-ArrayList <Ant> ants = new ArrayList<Ant>(); int numAnts = 20; 
+ArrayList <Ant> ants = new ArrayList<Ant>(); int numAnts = 1000; 
  
 void setup() {
   size(600, 600);
@@ -24,13 +24,23 @@ class Ant {
   Ant() {
     x = random(50, 450);
     y = random(50, 450);
-    bodySize = int(random(5, 20));
-    speed = new PVector(random(-0.8, 0.8), random(-0.8, 0.8));
+    bodySize = int(random(5,7));
+    
+   // speed = new PVector(random(-0.8, 0.8), random(-0.8, 0.8));
+    speed = new PVector(random(-5, 5), random(-5, 5));
+
+
   }
  
   //Methods - functions of the object that the class   creates. (abilities of the object)
   void drawAnt() {
     moveAnt();
+    if(bodySize<6){
+      fill (random(255),0,0);
+    } 
+    if(bodySize>=6) {
+      fill (random(255),random(255),0);
+    }
     ellipse(x, y, bodySize, bodySize);
   }
  
