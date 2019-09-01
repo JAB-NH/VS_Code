@@ -39,16 +39,6 @@ theta2Y=5
 button=createButton("CLICK ME TO CHANGE DISC COLOUR")
 button.position(10,265)
 button.mousePressed(change)
-/*
-button2=createButton("Run Page 2")
-button2.position(10,500)
-button2.mousePressed(loadPage2)
-
-button3=createButton("Run Page 3")
-button3.position(200,500)
-button3.mousePressed(loadPage3)
-
-*/
 
 slider=createSlider(0,200,50)
 slider2=createSlider(0,200,50)
@@ -89,19 +79,5 @@ function change() {
 image(extraCanvas,-50,-50)
 pop()
 theta2X=theta2X+2
-  theta2Y=theta2Y+2
-  //text("hello2",100,100);
+  theta2Y=theta2Y+2;
 }
-
-/*
-function loadPage2() {
-
-change()
-}
-
-function loadPage3() {
-
-change()
-}
-
-*/

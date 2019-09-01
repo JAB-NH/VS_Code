@@ -17,9 +17,6 @@ function setup() {
 //slider=createSlider(0,1,.3,0.01);
 createElement('br');
 createElement('br');
-createElement('br');
-createElement('br');
-createElement('br');
 button=createButton("Click to Play")
 
  // button.mousePressed("play")
@@ -40,12 +37,12 @@ function mousePressed(){
     // .isPlaying() returns a boolean
     song2.pause();
     song1.play();
-    canvas.position(50,170);
+    //canvas.position(50,170);
     background(0,255, 0);
   } else {
     song1.pause(); // playback will resume from the pause position
     song2.play();
-    canvas.position(250,170);
+    //canvas.position(250,170);
     background(255,0, 0);
   }
 }

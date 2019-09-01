@@ -54,7 +54,9 @@ for (int i=0;i<370;i+=45) {
 strokeWeight(5);
 
 line(centreX,centreY,centreX+(cos(angle)*radius)/2,centreY+(sin(angle)*radius)/2);
-angle=angle+0.01;
+
+speed=map(mouseX,0,width,0,.05);
+angle=angle+speed;
 if (angle > 2*PI) {
  angle=0;
 }
