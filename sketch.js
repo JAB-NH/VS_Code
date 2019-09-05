@@ -9,8 +9,8 @@ var theta2X
 var theta2Y
 var extraCanvas
 var extraCanvasCol=255
-let canvas1xpos=325
-var canvas1ypos=80
+var canvas1xpos=10
+var canvas1ypos=350
 var button
 var button2
 var button3
@@ -30,20 +30,20 @@ canvas.position(canvas1xpos,canvas1ypos)
 extraCanvas.background(extraCanvasColR,extraCanvasColG,extraCanvasColB) 
 extraCanvas.clear()
 //extraCanvas.position(canvas1xpos,canvas1ypos)
-extraCanvas.position(canvas1xpos,canvas1ypos)//position(0,0)
+//extraCanvas.position(canvas1xpos,canvas1ypos)//position(0,0)
 thetaX=100
 thetaY=100
 theta2X=25
 theta2Y=5
 
 button=createButton("CLICK ME TO CHANGE DISC COLOUR")
-button.position(10,265)
+button.position(30,365)
 button.mousePressed(change)
 
-slider=createSlider(0,200,50)
-slider2=createSlider(0,200,50)
-slider.position(10,350)
-slider2.position(10,440)
+slider=createSlider(0,300,50)
+slider2=createSlider(0,300,50)
+slider.position(10,250)
+slider2.position(10,300)
 }
 
 function change() {
