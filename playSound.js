@@ -17,12 +17,7 @@ function setup() {
 //slider=createSlider(0,1,.3,0.01);
 createElement('br');
 createElement('br');
-button=createButton("Click to Play")
-
- // button.mousePressed("play")
-  // CANNOT NCLUDE THE NEXT LINE     
-  //song.play()
-  //background(0, 255, 0)
+// button=createButton("Click to Stop All")
 }
 
 function draw(){
