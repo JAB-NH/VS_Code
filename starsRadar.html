@@ -4,16 +4,39 @@
   <title>Stars Radar Button Ball</title>
   <script src="processing.js"></script>
   <script src="TestButton1.js"></script>
+  <link rel="stylesheet" href="style.css">
+
   </head>
 <body>
-  <h3>Move Your Mouse Cursor Over The Starfield</h3>
-  <h3>And the Radar Screen to Speed Up the Action.</h3>
-  <br>
-  <p><button onclick="myFunction()">...then CLICK ME for a Secret Message</button>
-   <br><br>
+    <header>
+        <!--
+          <img class="logo" alt="logo" src="pics/beers2.jpg" height="200" width="300">
+        -->
+        <img class="logo" alt="logo" src="pics/beers2.jpg" height="150px" width="auto">
+       
+          <nav>
+              
+              <ul class="nav_links">
+  
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="indexfull3d.html">3D Example</a></li>
+                  <li><a href="weatherGlobal.html">Global Temperature</a></li>
+                  <li><a href="iss.html">ISS</a></li>
+                  <li><a href="starsRadar.html">Animations</li>
+                  <li><a href="playSound.html">Personal</a></li>
+            
+              </ul>
+             </nav>
+          
+           </header>
+  <hr>
+  
+  <h2>Move Your Mouse Cursor Over The Starfield and the Radar Screen to Speed Up the Action. On a SmartPone just tap either side of each display.</h2>
+  
     <canvas data-processing-sources="StarTest.pde"></canvas>
-    </p>
-    
     <canvas data-processing-sources="sweepArm.pde"></canvas>
+  <br>
+    <p><button class="button" onclick="myFunction()">...(then CLICK ME for a Secret Message)</button>
+    
   <body>
  </html>

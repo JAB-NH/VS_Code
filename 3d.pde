@@ -10,7 +10,7 @@ int txtY=0; // INITIAL VALUE FOR TEXT Y-COORDINATE
 int txtZ=-50; // INITIAL VALUE FOR TEXT Z-COORDINATE
 int txtSz=25; // INITIAL VALUE FOR FONT SIZE
 int txtDif=15; // INITIAL DIFFERENCE FOR TEXT SIZE DISLAYED IN 3D
-int opacity=1;
+int opacity=150;
 boolean started=false;
 //txtSz=txtSz;
 String startText="CLICK ANYWHERE TO START"; 
@@ -31,7 +31,7 @@ void setup() {
    y = (height/2); //350; //((screen.height)/2); //ORIGINAL Y VALUE
    z = -100; // ORIGINAL Z VALUE  -2000 Box comes closer as Z gets more positive
    ang=0;
-   rectMode(CORNER);
+   //rectMode(CORNER);
    textSize(txtSz); 
    //frameRate(60);
 }
@@ -40,93 +40,34 @@ void setup() {
 
 void draw() {
      //lights();
+      //////////////////////////////////////////////////////////////
+   //////. CREATE SLIDERS AND PUSH BUTTONS AND OPENING TEXT
    
-   
-   if ( mousePressed ) { //|| ( mouseMoved() ) {
-      started=true;
-      startText=" ";
-
-   }
-
-   if ((mouseX > 10) && (mouseX < 60) && (mouseY > 10) && (mouseY < 630)) {
-      rotX=map(mouseY, 10,550,-PI/2, 2*PI); // PUSHING X-SLIDER
-       }
-   if ((mouseX > 950) && (mouseX < 1000) && (mouseY > 10) && (mouseY < 630)) {
-      rotY=map(mouseY, 10,550,-PI/2,2*PI); // PUSHING Y-SLIDER
-       }
-   if ((mouseX > 10) && (mouseX < 960) && (mouseY > 640) && (mouseY < 690)) {
-      rotZ=map(mouseX, 10,850,-PI/2,2*PI); // PUSHING Z-SLIDER
-       }
-
- /// IF LEFT SIDE LOWER BOX TOUCHED-  V+
-    
- if ((mouseX > 100) && (mouseX < 150) && (mouseY > 550) && (mouseY < 600)) {
-      z=z+5;
-      if (z>2000){
-      z=-z;
-      }
-
-  }
-
- ///  IF LEFT SIDE UPPER BOX IS TOUCHED-  T+
-
-   if ((mouseX > 100) && (mouseX < 150) && (mouseY > 100) && (mouseY < 150)) {
-      txtZ=txtZ+.5; // PUSHING LEFT BOX
-      if (txtZ>200){
-      txtZ=-txtZ; //0;
-      }
-   }
-
- ///  IF RIGHT SIDE LOWER BOX TOUCHED-  V-
-
-  if ((mouseX > 870) && (mouseX < 920) && (mouseY > 550) && (mouseY < 600)) {
-      z=z-5;
-      if (z < -2000) {
-       z=-z; //0;
-       }
-    }
-
-///  IF RIGHT SIDE UPPER BOX IS TOUCHED-  T-
-
-  if ((mouseX > 870) && (mouseX < 920) && (mouseY > 100) && (mouseY < 150)) {
-      txtZ=txtZ-.5; // PUSHING LEFT BOX
-      if (txtZ<-200){
-      txtZ=-txtZ; //0;
-      }
-  }
-
-////////////////////////////////////////////////////////////////////
-//  RESETS ALL ROTx TO '0' if touching inside large rectangle
-
-    if ((mouseX > 930) && (mouseX < 990) && (mouseY > 610) && (mouseY < 660)) {
+if(!started){
       rotZ=0;
       rotX=0;
       rotY=0;
       z=0;
       txtZ=0;
 
-       }
-  
-   //////////////////////////////////////////////////////////////
-   //////. CREATE SLIDERS AND PUSH BUTTONS AND OPENING TEXT
-   
-   background(0,0,255);
-   fill(0);
 
-   text(startText,(width/2)-200,height/2);
-   fill(255,0,0);
+}
+
+   background(0,0,255);
    
+   text(startText,(width/2)-200,height/2);
+   fill(255,0,0,1);
    rect(10,10,50,620);    // X SLIDER
-   fill(0,opacity);textSize(txtSz*2);text("X",45,310,50);
+   fill(0);textSize(txtSz*2);text("X",45,310,50);
    textSize(txtSz);
    
-   fill(0,255,0,250);
+   fill(0,255,0,1);
    //noFill();
    rect(950,10,50,620);   // Y SLIDER
-   fill(0,opacity);textSize(txtSz*2);text("Y",955,310,50); 
+   fill(0);textSize(txtSz*2);text("Y",955,310,50); 
    textSize(txtSz);
 
-   fill(255,255,0,250);
+   fill(255,255,0,1);
    //noFill();
    rect(10,640,950,50);   // Z SLIDER
    fill(0);textSize(txtSz*1.5);text("Z",470,655,50);
@@ -137,7 +78,7 @@ void draw() {
    fill(0);textSize(txtSz+11);text("V+",130,567,50);
    textSize(txtSz);
       //triangle(125,550,100,620,150,620); Doesnt work with P3D
-   fill(100,0,200);
+   fill(100,0,200,1);
    rect(870,550,50,50);     // 'B' Button BOTTOM Right Side V-
    fill(0);textSize(txtSz+11);text("V-",865,565,50);
    textSize(txtSz);
@@ -158,7 +99,94 @@ void draw() {
    rect(68,20,875,610);   // INNER BOX HOLDING 3D OBJECT
    strokeWeight(2);
    
-   fill(0,0,0); 
+   fill(0,0,0,250); 
+   /////////////////////
+   
+   if ( mousePressed ) { //|| ( mouseMoved() ) {
+      started=true;
+      startText=" ";
+
+   }
+
+   if ((mouseX > 10) && (mouseX < 60) && (mouseY > 10) && (mouseY < 630)) {          fill(0,0,0);
+      rectMode(CENTER);
+      rect(mouseX,mouseY,100,25);
+      rectMode(CORNER);
+
+      rotX=map(mouseY, 10,550,-PI/2, 2*PI); // PUSHING X-SLIDER
+       }
+   if ((mouseX > 950) && (mouseX < 1000) && (mouseY > 10) && (mouseY < 600)) {
+      fill(0,0,0);
+      rectMode(CENTER);
+      rect(mouseX,mouseY,100,25);
+      rectMode(CORNER);
+
+
+      rotY=map(mouseY, 10,550,-PI/2,2*PI); // PUSHING Y-SLIDER
+       }
+   if ((mouseX > 10) && (mouseX < 930) && (mouseY > 640) && (mouseY < 690)) {
+      fill(0,0,0);
+      rectMode(CENTER);
+      rect(mouseX,mouseY,25,100);
+      rectMode(CORNER);
+
+      rotZ=map(mouseX, 10,850,-PI/2,2*PI); // PUSHING Z-SLIDER
+       }
+
+ /// IF LEFT SIDE LOWER BOX TOUCHED-  V+
+    
+ if ((mouseX > 100) && (mouseX < 150) && (mouseY > 550) && (mouseY < 600)) {
+      z=z+5;
+      if (z>1500){
+      z=-z;
+      }
+
+  }
+
+ ///  IF LEFT SIDE UPPER BOX IS TOUCHED-  T+
+
+   if ((mouseX > 100) && (mouseX < 150) && (mouseY > 100) && (mouseY < 150)) {
+      txtZ=txtZ+.5; // PUSHING LEFT BOX
+      if (txtZ>200){
+      txtZ=-txtZ; //0;
+      }
+   }
+
+ ///  IF RIGHT SIDE LOWER BOX TOUCHED-  V-
+
+  if ((mouseX > 870) && (mouseX < 920) && (mouseY > 550) && (mouseY < 600)) {
+      z=z-5;
+      if (z < -1500) {
+       z=-z; //0;
+       }
+    }
+
+///  IF RIGHT SIDE UPPER BOX IS TOUCHED-  T-
+
+  if ((mouseX > 870) && (mouseX < 920) && (mouseY > 100) && (mouseY < 150)) {
+      txtZ=txtZ-.5; // PUSHING LEFT BOX
+      if (txtZ<-200){
+      txtZ=-txtZ; //0;
+      }
+  }
+
+////////////////////////////////////////////////////////////////////
+//  RESETS ALL ROTx TO '0' if touching inside large rectangle
+   rectMode(CORNER);
+   fill(255);
+   rect(960,640,60,50);
+     
+
+    if ((mouseX > 970) && (mouseY > 650)) {
+       //(mouseX > 930) && (mouseX < 990) && (mouseY > 610) && (mouseY < 660)
+      rotZ=0;
+      rotX=0;
+      rotY=0;
+      z=0;
+      txtZ=0;
+
+       }
+  
 
    /////////////////////DO THE FOLLOWING ONCE STARTED = TRUE ////////////////////////
    
@@ -192,7 +220,7 @@ void draw() {
       //text(txtX+","+txtY+","+int(txtZ),txtX,txtY,txtZ);  
 
       
-      fill(125,125,50);
+      fill(125,125,200);
       box(sq);
       popMatrix();
 
