@@ -1,4 +1,3 @@
 function myFunction() {
-fill(255,255,255);
-  alert ("Hey There!..As everyone knows I Love Storm...4248");
+  alert ("Hey There!...As You May Already Know...I Love Storm...4248");
 }
