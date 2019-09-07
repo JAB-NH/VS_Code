@@ -21,23 +21,20 @@ header{
 display:flex;
 justify-content:space-around;
 align-items:center;
-padding:30px 10%;
+padding:10px 1%;
 
 }
 
 .logo{
   cursor:pointer;
-  padding:0 20px;
-  margin-right:30px;
-  margin-left:0;
-  padding-left:0;
+  
   }
 
 .nav_links li{
 display:flex;
 display:inline-block;
 list-style: none;
-padding:20px 30px 0px 0px;
+padding: 10px 20px 20px 15px;
 
 }
 
@@ -61,7 +58,7 @@ font-size:14pt;
   display:flex;
   flex-direction:column;
   padding-top:30px;
-  padding-left:50px;
+  padding-left:60px;
   padding-right:100px;
 justify-content:left;
 color:yellowgreen;
@@ -73,8 +70,14 @@ color:yellowgreen;
    
 }
 .sidebar p{
-  font-size:16px;
+  font-size:18px;
 }
+.sidebar h3{
+  color:orange;
+  padding:0px,0px,50px,0px
+   
+}
+
 
 .foot{
   margin-top:90px;
