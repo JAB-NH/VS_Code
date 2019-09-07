@@ -6,8 +6,8 @@ var canvas;
 
 function preload() {
  // song = loadSound("watchtower.mp3");
-  song1 = loadSound("On The Streets of Amsterdam.wav");
-  song2 = loadSound("One_Day.wav")
+  song1 = loadSound("songs/On The Streets of Amsterdam.wav");
+  song2 = loadSound("songs/One_Day.wav")
   
 }
 
