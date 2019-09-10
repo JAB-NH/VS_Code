@@ -37,13 +37,14 @@ theta2X=25
 theta2Y=5
 
 button=createButton("CLICK ME TO CHANGE DISC COLOUR")
+//button.background(255,255,255)
 button.position(30,365)
 button.mousePressed(change)
 
 slider=createSlider(0,300,50)
 slider2=createSlider(0,300,50)
-slider.position(10,250)
-slider2.position(10,300)
+slider.position(10,200)
+slider2.position(10,250)
 }
 
 function change() {
