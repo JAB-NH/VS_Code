@@ -21,25 +21,75 @@
        width: 530px;
      }
    </style>
-   <!--<link rel="stylesheet" href="style.css"> -->
 
+<!-- Instead of using style.css which overrides the imported *.CSS use the <style> tag just for the header -->
+
+   <style>
+  #issheader{
+display:flex;
+justify-content:space-around;
+align-items:center;
+padding:5px 1%;
+background-color: rgb(86, 102, 146);
+
+
+}
+
+.logo{
+  cursor:pointer;
+  
+  }
+
+.nav_links li{
+display:flex;
+display:inline-block;
+list-style: none;
+padding: 10px 20px 20px 15px;
+
+}
+
+.nav_links li a {
+ transition: all 0.3s ease 0s;
+ color:white;
+}
+
+.nav_links li a:hover{
+
+color: rgb(1, 1, 17);
+font-size:14pt;
+}
+
+  </style>
+   
 
     </head>
     <body>
-        <header>
-        <!--
-          <img class="logo" alt="logo" src="pics/beers2.jpg" height="200" width="300">
-        -->
-       <a href="index.html"><img class="logo" alt="logo" src="pics/beers2.jpg" height="100px" width="auto" > </a>       
-           </header>
+        <header id="issheader">
+              <img class="logo" alt="logo" src="pics/beers2.jpg" height="100" width="auto">
+     
+        <nav>
+            
+            <ul class="nav_links">
+
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="indexfull3d.html">3D Example</a></li>
+                <li><a href="weatherGlobal.html">Global Temperature</a></li>
+                <li><a href="iss.html">ISS</a></li>
+                <li><a href="starsRadar.html">Animations</li>
+                <li><a href="playSound.html">Personal</a></li>
+          
+            </ul>
+           </nav>
+        
+          </header>
   <hr>
               
       <h1>Where is the ISS?</h1>
       <p>Latitude: <span id="lat"></span></p>
       <p>Longitude: <span id="lon"></span></p>
-      <p>altitude: <span id="alt"></span></p>
+     <!--  <p>altitude: <span id="alt"></span></p>
       <p>velocity: <span id="vel"></span></p>
-
+ -->
       <div id="issMap"></div>
 
       <script>
@@ -81,9 +131,10 @@
 
         document.getElementById('lat').textContent=latitude.toFixed(4);
         document.getElementById('lon').textContent=longitude.toFixed(4);
-        document.getElementById('alt').textContent=altitude.toFixed(0);
-        document.getElementById('vel').textContent=velocity.toFixed(0);
-
+        
+        //document.getElementById('alt').textContent=altitude.toFixed(0);
+        //document.getElementById('vel').textContent=velocity.toFixed(0);
+        
       }
       
       getISS();

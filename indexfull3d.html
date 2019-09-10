@@ -10,10 +10,10 @@
   <script src="p5.js"></script>
   <script src="p5.dom.js"></script>
   <script src="p5.sound.js"></script>
-  <script src="processing.js"></script> 
+ <!-- <script src="processing.js"></script> 
  
  
-  <!--<script src="sketch1.js"></script>--> 
+<script src="sketch1.js"></script>--> 
 
  <!--
   <link rel="stylesheet" type="text/css" href="style.css">
@@ -23,32 +23,65 @@
   <link rel="stylesheet" href="style.css">
 
   <title>3D/Sliders/Button</title>
-</head>
+ <!-- Instead of using style.css which overrides the imported *.CSS use the <style> tag just for the header -->
 
-<body>
-    <header>
-        <!--
-          <img class="logo" alt="logo" src="pics/beers2.jpg" height="200" width="300">
-        -->
-        <a href="index.html"><img class="logo" alt="logo" src="pics/beers2.jpg" height="150px" width="auto" > </a>
-       
-          <nav>
+    <style>
+        #issheader{
+      display:flex;
+      justify-content:space-around;
+      align-items:center;
+      padding:5px 1%;
+      background-color: rgb(86, 102, 146);
+      
+      
+      }
+      
+      .logo{
+        cursor:pointer;
+        
+        }
+      
+      .nav_links li{
+      display:flex;
+      display:inline-block;
+      list-style: none;
+      padding: 10px 20px 20px 15px;
+      
+      }
+      
+      .nav_links li a {
+       transition: all 0.3s ease 0s;
+       color:white;
+      }
+      
+      .nav_links li a:hover{
+      
+      color: rgb(1, 1, 17);
+      font-size:14pt;
+      }
+      </style>
+        </head>
+          <body>
+            <header id="issheader">
+                    <img class="logo" alt="logo" src="pics/beers2.jpg" height="100" width="auto">
+           
+              <nav>
+                  
+                <ul class="nav_links">
+      
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="indexfull3d.html">3D Example</a></li>
+                      <li><a href="weatherGlobal.html">Global Temperature</a></li>
+                      <li><a href="iss.html">ISS</a></li>
+                      <li><a href="starsRadar.html">Animations</li>
+                      <li><a href="playSound.html">Personal</a></li>
+                
+                  </ul>
+                </nav>
               
-              <ul class="nav_links">
-  
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="indexfull3d.html">3D Example</a></li>
-                  <li><a href="weatherGlobal.html">Global Temperature</a></li>
-                  <li><a href="iss.html">ISS</a></li>
-                  <li><a href="starsRadar.html">Animations</li>
-                  <li><a href="playSound.html">Personal</a></li>
-            
-              </ul>
-             </nav>
-          
-           </header>
-  <hr>
-  
+            </header>
+        <hr>
+       
 <div> <script src="sketch.js"></script> 
 </div>    
 <!-- Begin WeatherLink Fragment

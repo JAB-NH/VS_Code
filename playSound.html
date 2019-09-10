@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+ <!DOCTYPE html> 
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
@@ -14,14 +14,51 @@
     <script src="p5.dom.js"></script>
     <script src="p5.sound.js"></script>
     
+<!-- Instead of using style.css which overrides the imported *.CSS use the <style> tag just for the header -->
 
-  </head>
-    <body>
-        <header>
-            <!--
-              <img class="logo" alt="logo" src="pics/beers2.jpg" height="200" width="300">
-            -->
-            <a href="index.html"><img class="logo" alt="logo" src="pics/beers2.jpg" height="150px" width="auto" > </a>           
+    <style>
+        #issheader{
+      display:flex;
+      justify-content:space-around;
+      align-items:center;
+      padding:5px 1%;
+      background-color: rgb(86, 102, 146);
+      
+      
+      }
+      
+      .logo{
+        cursor:pointer;
+        
+        }
+      
+      .nav_links li{
+      display:flex;
+      display:inline-block;
+      list-style: none;
+      padding: 10px 20px 20px 15px;
+      
+      }
+      
+      .nav_links li a {
+       transition: all 0.3s ease 0s;
+       color:white;
+      }
+      
+      .nav_links li a:hover{
+      
+      color: rgb(1, 1, 17);
+      font-size:14pt;
+      }
+      
+        </style>
+         
+      
+          </head>
+          <body>
+              <header id="issheader">
+                    <img class="logo" alt="logo" src="pics/beers2.jpg" height="100" width="auto">
+           
               <nav>
                   
                   <ul class="nav_links">
@@ -36,15 +73,20 @@
                   </ul>
                  </nav>
               
-               </header>
-      <hr>
-       <br>
-      <h2>Welcome to Words & Sounds</h2>
+                </header>
+        <hr>
+             <br>
+      <h1>A Personal Presentation of Writings and Music</h1>
+      <br>
+      <h3>Details of each writing will appear after selecting from either  <a href="indexCreate.html">In The Beginning  </a> OR <a href="indexsay.html">What's That You Say</a></h3>
       <br>
       <br>
-      <h4>Click Anywhere to Start 1 Song and Stop The Other. Return HOME to stop both</h4>
+      <h4>Or Click to hear two different musical arrangements. 
+        <br>
+        Click to Start 1 Song and Stop The Other.
+        <br>Return HOME to stop both from playing</h4>
       <br>
-      <h5>Green indicates Instrumental - Red includes Words & Singing</h5>
+      <h5>A Green Square indicates an Instrumental composition - A Red Square indicates a song with words</h5>
       <br>
     </body>
 
