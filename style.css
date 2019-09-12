@@ -7,6 +7,14 @@
   background-color: rgb(86, 102, 146);
 }
 
+#button{
+background-color: white;
+padding-top:5px;
+padding-bottom:5px;
+
+
+}
+
 li a{
 
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
