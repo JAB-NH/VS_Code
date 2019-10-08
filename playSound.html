@@ -8,8 +8,7 @@
  
   
     <title>Writing & Music</title>
-  
-    <script src="playSound.js"></script>         
+          
     <script src="p5.js"></script>
     <script src="p5.dom.js"></script>
     <script src="p5.sound.js"></script>
@@ -17,7 +16,7 @@
 <!-- Instead of using style.css which overrides the imported *.CSS use the <style> tag just for the header -->
 
     <style>
-      #issheader{
+      #playSoundHeader{
       display:flex;
       justify-content:space-around;
       align-items:center;
@@ -27,15 +26,13 @@
       
       .logo{
         cursor:pointer;
-        
-        }
+      }
       
       .nav_links li{
       display:flex;
       display:inline-block;
       list-style: none;
       padding: 10px 20px 20px 15px;
-      
       }
       
       .nav_links li a {
@@ -48,29 +45,26 @@
       color: rgb(1, 1, 17);
       font-size:14pt;
       }
-      
-        </style>
-        </head>
+    </style>
+   </head>
           <body>
-              <header id="issheader">
-                  <a><img class="logo" alt="logo" src="pics/beers2.jpg" height="100px" width="auto" > </a>
-       
+              <header id="playSoundHeader">
+                <a href="index.html"><img class="logo" alt="logo" src="pics/beers2.jpg" height="100px" width="auto" > </a>
+ 
               <nav>
-                  
                   <ul class="nav_links">
-      
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="indexfull3d.html">3D Example</a></li>
+                      <li><a href="index.html">HOME</a></li>
+                      <li><a href="indexfull3d.html">3D Example</a></li>
                       <li><a href="weatherGlobal.html">Global Temperature</a></li>
                       <li><a href="iss.html">ISS</a></li>
                       <li><a href="starsRadar.html">Animations</li>
                       <li><a href="playSound.html">Personal</a></li>
                 
                   </ul>
-                 </nav>
-              
-                </header>
+              </nav>
+            </header>
         <hr>
+    <div >
       <br>
       <h3>A Personal Presentation of Several Writings and Some Personal Music</h3>
       <br>
@@ -79,20 +73,12 @@
       <br>
       <a href="indexCreate.html">IN THE BEGINNING   </a>
 ....OR....<a href="indexsay.html">WHAT'S THAT YOU SAY?</a>
+      </h5>
       <br>
       <br>
-      <h3>or select some Guitar Music </h3>
+      <h3>or select some <a href="music.html">Guitar Music</a></h3>
       <br>
-      <h4>
-      Click OUR PICTURE once to Start Song 1.
-      <br>
-      Click Again to Switch between Song 1 & Song 2.
-      <br>Click HOME to stop both from playing and exit</h4>
-      <br>
-      <h4>A Green Square indicates an Instrumental composition is playing.
-      <br>
-      A Red Square indicates a song with words is playing</h4>
-      <br>
+    </div> 
     </body>
 
   </html>

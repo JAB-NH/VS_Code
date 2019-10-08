@@ -15,8 +15,8 @@ function setup() {
   canvas = createCanvas(100, 100);
 
 //slider=createSlider(0,1,.3,0.01);
-createElement('br');
-createElement('br');
+//createElement('br');
+//createElement('br');
 // button=createButton("Click to Stop All")
 }
 
